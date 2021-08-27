@@ -1,0 +1,23 @@
+{
+  "name": "@midival/inspector",
+  "version": "0.0.1",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-image": "2.0.0-rc.0",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "parcel": "^2.0.0-rc.0"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@midival/core": "^0.0.13",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
