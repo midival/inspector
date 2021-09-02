@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import { Message } from "../../types/message";
 import { midiNoteToString } from "../../utils/note";
+import { extraValue } from "./utils";
 
 
 const LastMessage = styled.div`
@@ -33,11 +34,25 @@ const bigValue = (message: Message) => {
     }
 }
 
+const ExtraValueComponent = styled.div`
+    color: #DDD;
+    font-size: 0.8em;
+`;
+
+const ExtraValue = ({ value }) => {
+    if (!value) {
+        return null;
+    }
+
+    return <ExtraValueComponent>{value}</ExtraValueComponent>
+}
+
 export const MidiMessageBox = ({ message }) => {
     return (
         <LastMessage>
             <MessageType>{message.type}</MessageType>
             <BigValue>{bigValue(message)}</BigValue>
+            <ExtraValue value={extraValue(message)} />
             <SecondaryValue>{message.data2}</SecondaryValue>
             <div>Channel: {message.channel}</div>
         </LastMessage>

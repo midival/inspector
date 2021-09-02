@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { Message, MessageType } from "../../types/message";
 import { ArrayWrapper } from "../../utils/arrayWrapper";
 import { MidiMessageBox } from "../midiMessageBox";
+import { extraValueForTable } from "../midiMessageBox/utils";
 import { InfoBox } from "../styled/InfoBox";
 
 interface Props {
@@ -59,17 +60,21 @@ export const InputLog = ({ input }: Props) => {
             <thead>
                 <tr>
                     <th>Command</th>
+                    <th>Command Readable</th>
                     <th>Channel</th>
                     <th>Data 1</th>
                     <th>Data 2</th>
+                    <th>Extra</th>
                 </tr>
             </thead>
             <tbody>
                 {data.map(message => <tr key={message.time}>
                     <td>{message.command}</td>
+                    <td>{message.type}</td>
                     <td>{message.channel}</td>
                     <td>{message.data1}</td>
                     <td>{message.data2}</td>
+                    <td>{extraValueForTable(message)}</td>
                     </tr>)}
             </tbody>
         </Table>
