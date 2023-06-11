@@ -1,0 +1,32 @@
+.encoder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: red;
+    position: relative;
+    border: 1px solid black;
+}
+
+.encoder::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 50%;
+    background: black;
+    position: absolute;
+    top: 0%; left: 50%;
+    transform: translate(-50%, 0%) rotate(-130deg) rotate(calc(300deg * var('--rot-val')));
+    transform-origin: bottom center;
+}
+
+.value {
+    font-weight: bold;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    background: red;
+    width: 50px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 50%;
+}
