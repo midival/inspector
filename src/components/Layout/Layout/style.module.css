@@ -1,0 +1,8 @@
+.layout {
+    display: flex;
+    gap: 1em;
+}
+
+.layoutColumn {
+    flex-direction: column;
+}

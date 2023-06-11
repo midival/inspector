@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background: #282c34;
+  color: #FFF;
+  padding: 2em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

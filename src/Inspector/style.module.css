@@ -1,0 +1,40 @@
+.inspectTable {
+    border-collapse: collapse;
+    width: 100%;
+    flex: 1;
+    font-size: 0.8em;
+    padding: 0 3em;
+    box-sizing: border-box;
+}
+
+.inspectTable tbody tr {
+    background: #2e2f3a;
+    color: #FFF;
+}
+
+.inspectTable tbody td {
+    padding: 0.6em 1em;
+}
+
+.inspectTable tbody tr:nth-child(2n) {
+    background: #2b2c34;
+}
+
+.mainRow {
+    margin: 0 2em;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.logoRow {
+    display: flex;
+    align-content: start;
+    align-items: start;
+    font-weight: bold;
+    gap: 0.2em;
+    font-size: 1.2em;
+    line-height: 0.3em;
+    margin-right: auto;
+}
